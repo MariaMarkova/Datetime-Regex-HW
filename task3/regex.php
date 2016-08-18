@@ -63,7 +63,9 @@ $strClass = ".class {\color:white;\n}";
 preg_match_all($rgex_Class, $strClass, $matchesClass);
 
 // 14. Началото на всички валидни PHP while цикли
-
+$regex_WhileLoop = "/(^while)[ ]*([(]([^()]|(?2))*[)])\\s*({)\\s*(})/";
+$strWhileLoop = "while (\$x < 5) {\n}";
+preg_match_all($regex_WhileLoop, $strWhileLoop, $matchesLoop);
 
 // 15. Валиден SQL SELECT стейтмънт
 $subject_SqlSelext = 'SELECT city FROM customers;';
